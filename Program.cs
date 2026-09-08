@@ -1,5 +1,5 @@
-﻿Player Player1 = new Player();
-Player Player2 = new Player();
-Console.WriteLine(Player1.id);
-Console.WriteLine(Player2.id);
-
+﻿Team team1 = new Team();
+team1.AddPlayers();
+foreach (Player i in team1.Roster){
+    Console.WriteLine(i.Name);
+}

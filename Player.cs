@@ -11,6 +11,7 @@ class Player
             "Taylor", "Anderson", "Thomas", "Jackson", "White", "Harris", "Clark",
             "Lewis", "Walker", "Young", "Allen", "Robinson", "Carter"
         };
+        
         public Random rng = new Random();
         public string Name;
         public int Age;
@@ -21,17 +22,18 @@ class Player
         public int id;
         public int Ovr;
         public static int nextId;
+
         public Player()
         {
-        Age = rng.Next(18,42);
-        Name = $"{firstNames[rng.Next(firstNames.Length)]} {lastNames[rng.Next(lastNames.Length)]}";
-        Scoring = rng.Next(60, 100);  
-        Defense = rng.Next(60, 100);  
-        Rebounding = rng.Next(60, 100);  
-        Playmaking = rng.Next(60, 100);  
-        id = nextId;
-        nextId++;
-        Ovr = (Scoring + Defense + Rebounding + Playmaking) / 4;
+            Age = rng.Next(18,42);
+            Name = $"{firstNames[rng.Next(firstNames.Length)]} {lastNames[rng.Next(lastNames.Length)]}";
+            Scoring = rng.Next(60, 100);  
+            Defense = rng.Next(60, 100);  
+            Rebounding = rng.Next(60, 100);  
+            Playmaking = rng.Next(60, 100);  
+            id = nextId;
+            nextId++;
+            Ovr = (Scoring + Defense + Rebounding + Playmaking) / 4;
         }
 
     }
