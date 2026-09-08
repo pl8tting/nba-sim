@@ -77,6 +77,5 @@ class Game
             teama.Loss++;
             teamb.Wins++;
         }
-        Console.WriteLine($"{teama.Name} - {teamb.Name}: {teamPointsA} - {teamPointsB}");
     }
 }

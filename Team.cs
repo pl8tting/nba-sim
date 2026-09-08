@@ -45,6 +45,12 @@ class Team
             Player player = new Player();
             Roster.Add(player);
             Weight += player.Weight;
+            Player.AllPlayers.Add(player);
         }
+        foreach (var i in Roster)
+        {
+            Ovr += i.Scoring;
+        }
+        Ovr = Ovr / Roster.Count();
     }
 }

@@ -1,5 +1,6 @@
 class Player
 {
+    public static List<Player> AllPlayers = new();
     public string[] FirstNames = {
         "James", "Michael", "Chris", "Anthony", "Kevin", "Jordan", "Marcus",
         "Devin", "Trevor", "Malik", "Isaiah", "Andre", "Tyler", "Jalen",
