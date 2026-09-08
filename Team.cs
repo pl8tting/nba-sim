@@ -1,5 +1,5 @@
 class Team{
-
+    // Setting random
     public Random rng = new Random();
 
     string[] cities = {
@@ -20,21 +20,26 @@ class Team{
     public int Ovr;
     public List<Player> Roster;
     public string City;
+    public double Weight=0;
 
     public Team(){
         City = $"{cities[rng.Next(cities.Length)]}";
         Name = $"{City} {nicknames[rng.Next(nicknames.Length)]}";
         Ovr = 0;
         Roster = new List<Player>();
+        
 
     }
     public void AddPlayer(Player player){
         Roster.Add(player);
+        Weight += player.weight;
     }
+    // There are 15 players in a team
     public void AddPlayers(){
-        for (int i=0;i<=15;i++){
+        for (int i=0;i<15;i++){
             Player player = new Player();
             Roster.Add(player);
+            Weight += player.weight;
         }
     }
 }

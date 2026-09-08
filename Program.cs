@@ -1,5 +1,7 @@
 ﻿Team team1 = new Team();
 team1.AddPlayers();
-foreach (Player i in team1.Roster){
-    Console.WriteLine(i.Name);
-}
+Team team2 = new Team();
+team2.AddPlayers();
+
+Game game1 = new Game();
+game1.Simulate(team1,team2);
