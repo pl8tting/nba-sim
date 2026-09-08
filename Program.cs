@@ -5,3 +5,5 @@ team2.AddPlayers();
 
 Game game1 = new Game();
 game1.Simulate(team1,team2);
+game1.BoxScore(team1);
+game1.BoxScore(team2);

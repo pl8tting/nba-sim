@@ -7,10 +7,10 @@ A console-based basketball simulator using C#. Players and teams are modeled as 
 - `Player` class: name, age, and position, with randomly generated ratings (scoring, defense, rebounding, playmaking) and a computed overall rating (OVR)
 - `Team` class: holds a roster of players
 - Random player generation 
+- possession-by-possession scoring
 
 ## Planned
- 
-- Game simulation engine (possession-by-possession scoring)
+
 - Season and schedule management across multiple games
 - Player progression / training system that adjusts ratings over time
 - GUI (after the console version is complete)
