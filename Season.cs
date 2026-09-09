@@ -37,7 +37,7 @@ class Season
         foreach (var team in teams.OrderByDescending(team => team.Wins))
         {
             
-            Console.WriteLine($"{team.Name}: {team.Wins} Wins, {team.Loss} Losses with an {team.Ovr} average Scoring");
+            Console.WriteLine($"{team.Name}: {team.Wins} Wins, {team.Loss} Losses with an {team.Ovr} average Ovr");
         }
     }
     public void ScoringLeader()

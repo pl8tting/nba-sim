@@ -23,9 +23,11 @@ class Team
     public List<Player> Roster;
     public string City;
     public double Weight = 0;
+    public double Defense;
 
     public Team()
     {
+        Defense = 0;
         City = $"{cities[Rng.Next(cities.Length)]}";
         Name = $"{City} {nicknames[Rng.Next(nicknames.Length)]}";
         Ovr = 0;
@@ -36,6 +38,16 @@ class Team
     {
         Roster.Add(player);
         Weight += player.Weight;
+        Ovr = 0;
+        Defense = 0;
+        foreach (var i in Roster)
+        {
+            Ovr += i.Ovr;
+            Defense += i.Defense;
+        }
+        Ovr = Ovr / Roster.Count;
+        Defense = Defense / Roster.Count;
+        Player.AllPlayers.Add(player);
     }
 
     public void AddPlayers()
@@ -47,10 +59,14 @@ class Team
             Weight += player.Weight;
             Player.AllPlayers.Add(player);
         }
+        Defense = 0;
+        Ovr = 0;
         foreach (var i in Roster)
         {
-            Ovr += i.Scoring;
+            Ovr += i.Ovr;
+            Defense += i.Defense;
         }
         Ovr = Ovr / Roster.Count();
+        Defense = Defense / Roster.Count();
     }
 }
