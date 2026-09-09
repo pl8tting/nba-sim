@@ -24,7 +24,7 @@ class Game
         int possesion = 0;
         double diff = 0;
         // Defense can shift shot chance by about 30%
-        double maxSwing = 0.9;
+        double maxSwing = 0.3;
 
         for (int f = 0; f < totalPossesions; f++)
         {
@@ -65,10 +65,15 @@ class Game
                     tempCheck += i.Weight;
                     if (tempCheck >= playerChoice)
                     {
-                        if (Rng.NextDouble() <= i.Fg)
+                        diff = i.Scoring - teama.Defense;
+                        diff = diff / 39.0;
+                        diff = (maxSwing * diff);
+                        double AdjustedFg = i.Fg + diff;
+                        int twoOrThree = Rng.Next(2, 4);
+                        i.Scored(twoOrThree);
+                        AdjustedFg = Math.Clamp(AdjustedFg, 0.10, 0.65);
+                        if (Rng.NextDouble() <= AdjustedFg)
                         {
-                            int twoOrThree = Rng.Next(2, 4);
-                            i.Scored(twoOrThree);
                             teamPointsB += twoOrThree;
                             gamePoints[i] += twoOrThree;
                         }
