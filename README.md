@@ -1,28 +1,54 @@
-# NBA Sim
+# NBA Simulator
  
-A console-based basketball simulator using C#. Players and teams are modeled as objects with randomly generated stats, with a full game simulation engine and season loop in progress.
+A console-based basketball simulator built with C#. Players and teams are modeled as objects with randomly generated stats, with games simulated possession by possession across an 8-team league season.
  
-## What's implemented so far
+## What's implemented
  
-- `Player` class: name and age, with randomly generated ratings (scoring, defense, rebounding, playmaking) and a computed overall rating (OVR)
-- `Team` class: holds a roster of players
-- possession-by-possession scoring
-- An 8-team league with randomly generated rosters
-- Double round-robin scheduling, where every team plays every opponent twice
-- Season standings sorted by wins
-- Season scoring leaders based on total points scored
+- `Player` class with a name, age, and randomly generated ratings for scoring, defense, rebounding, and playmaking, along with a computed overall rating (OVR)
+- `Team` class that manages a roster of players
+- Possession-by-possession game simulation and scoring
+- An 8-team league with randomly generated player rosters
+- Double round-robin schedule, where every team plays every opponent twice
+- Season standings ranked by total wins
+- Season scoring leaders ranked by total points scored
 
-## Planned
+## Planned Features
 
-- Season and schedule management across multiple games
-- Player progression / training system that adjusts ratings over time
+- Player progression and training system that adjusts ratings over time
+- Player injuries
 - GUI (after the console version is complete)
+- Playoff and championship simulation
+  
+## What I Learned
 
-## Running it
- 
-```
-dotnet run
-```
+- Object-oriented programming
+- Organizing a project across multiple files
+- Designing classes that interact with each other
+- Building game and simulation logic
+
+## How to Run
+
+1. Clone this repository
+2. Open the project in Visual Studio or another C# IDE
+3. Build the project
+4. Run the application
+
+## How It Works
+
+The simulator creates an 8-team basketball league with randomly generated player rosters and ratings.
+
+Each team plays every other team twice in a double round-robin schedule. Games are simulated possession by possession, with the results contributing to the season standings and player scoring totals.
+
+At the end of the season, teams are ranked by total wins and players are ranked by total points scored.
+
+## Future Direction
+
+The goal of this project is to continue expanding the simulator into a more complete basketball league simulation, with deeper player development, more detailed statistics, and a full playoff system.
+
+## Requirements
+
+- .NET
+- A C# IDE such as Visual Studio or Visual Studio Code
  
 ## Sample output
 
@@ -45,7 +71,3 @@ James Thomas Scored 193 Points with a Scoring of 95
 Marcus Lewis Scored 191 Points with a Scoring of 99
 Kevin Taylor Scored 190 Points with a Scoring of 98
 ```
-## Built with
- 
-- C#
-- .NET
